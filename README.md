@@ -89,5 +89,3 @@ Na primeira célula do notebook, as dependências necessárias serão instaladas
 
 Bash
 !pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib
-
-*Lembre-se de substituir o link de placeholder `COLOQUE_SEU_LINK_AQUI` pelo link do YouTube após gravar a apresentação e, caso queira, apontar os badges do Colab diretamente para os seus arquivos `.ipynb` no GitHub!*
