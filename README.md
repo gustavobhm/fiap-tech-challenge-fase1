@@ -33,3 +33,30 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 │   └── 02_visao_computacional_cnn_busi.ipynb     # Notebook 2: Visão Computacional & Grad-CAM
 ├── README.md                                     # Documentação do repositório
 └── requirements.txt                              # Dependências do projeto
+
+
+## 🚀 Como Executar o Projeto no Google Colab
+
+Os notebooks foram desenvolvidos e otimizados para execução direta no **Google Colab**.
+
+### Opção 1: Abrir diretamente pelos links (Recomendado)
+
+Você pode abrir e rodar os notebooks diretamente no Google Colab clicando nos botões abaixo:
+
+* **Notebook 1 (Dados Tabulares - Wisconsin & SHAP):**  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/01_classificacao_tabular_wisconsin.ipynb)
+
+* **Notebook 2 (Visão Computacional - BUSI & Grad-CAM):**  
+  *(Recomendado ativar a aceleração por GPU no menu: Editar > Configurações do notebook > Acelerador de hardware > GPU T4)*  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi.ipynb)
+
+---
+
+### Opção 2: Passo a Passo Manual no Colab
+
+1. Acesse o [Google Colab](https://colab.research.google.com/).
+2. Vá em **File > Upload Notebook** (Arquivo > Fazer upload do notebook) e envie o arquivo `.ipynb` desejado da pasta `notebooks/`.
+3. Na primeira célula do notebook, as dependências necessárias serão instaladas automaticamente executando:
+   ```python
+   !pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib
+
