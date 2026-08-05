@@ -1,58 +1,67 @@
-# 🩺 Tech Challenge - Fase 1 | Pós-Graduação FIAP
+<h1>🩺 Tech Challenge - Fase 1 | Pós-Graduação FIAP</h1>
 
-Este repositório contém a solução do **Tech Challenge (Fase 1)** da Pós-Graduação em Inteligência Artificial para Devs da FIAP. O projeto consiste em um sistema de suporte ao diagnóstico médico de câncer de mama utilizando uma **abordagem multimodal** que combina análise estatística de dados tabulares e visão computacional em imagens de ultrassom.
+<p>Este repositório contém a solução do <strong>Tech Challenge (Fase 1)</strong> da Pós-Graduação em Inteligência Artificial para Devs da FIAP. O projeto consiste em um sistema de suporte ao diagnóstico médico de câncer de mama utilizando uma <strong>abordagem multimodal</strong> que combina análise estatística de dados tabulares e visão computacional em imagens de ultrassom.</p>
 
----
+<hr>
 
-## 👥 Integrantes do Grupo
+<h2>👥 Integrantes do Grupo</h2>
 
-* **Gustavo Luis dos Santos**
+<ul>
+  <li><strong>Gustavo Luis dos Santos</strong></li>
+</ul>
 
----
+<hr>
 
-## 🎥 Vídeo de Demonstração do Projeto
+<h2>🎥 Vídeo de Demonstração do Projeto</h2>
 
-Acesse a apresentação completa da solução, cobrindo a arquitetura, código dos notebooks e análise de explicabilidade (SHAP e Grad-CAM):
+<p>Acesse a apresentação completa da solução, cobrindo a arquitetura, código dos notebooks e análise de explicabilidade (SHAP e Grad-CAM):</p>
 
-👉 **[Assistir ao Vídeo no YouTube](COLOQUE_SEU_LINK_AQUI)**
+<p>👉 <strong><a href="COLOQUE_SEU_LINK_AQUI">Assistir ao Vídeo no YouTube</a></strong></p>
 
----
+<hr>
 
-## 🎯 Escopo do Projeto
+<h2>🎯 Escopo do Projeto</h2>
 
-O sistema é dividido em dois pilares complementares de Inteligência Artificial:
+<p>O sistema é dividido em dois pilares complementares de Inteligência Artificial:</p>
 
-1. **Modelo Tabular (Regressão Logística):** Treinado no dataset *Breast Cancer Wisconsin* para classificação binária (Maligno / Benigno). Conta com explicabilidade global e local através de **SHAP (SHapley Additive exPlanations)**.
-2. **Modelo de Visão Computacional (MobileNetV2):** Treinado no dataset *BUSI (Breast Ultrasound Images)* para classificação multiclasse (Benigno / Maligno / Normal). Conta com validação visual local via **Grad-CAM (Gradient-weighted Class Activation Mapping)** para destacar as regiões anatômicas relevantes na imagem.
+<ol>
+  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>.</li>
+  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal). Conta com validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong> para destacar as regiões anatômicas relevantes na imagem.</li>
+</ol>
 
----
+<hr>
 
-## 📊 Métricas e Resultados
+<h2>📊 Métricas e Resultados</h2>
 
-### 1. Classificação Tabular (Breast Cancer Wisconsin)
-* **Modelo:** Regressão Logística + StandardScaler
-* **Acurácia:** 98,25%
-* **Recall (Casos Malignos):** 97,62% *(Taxa de omissão de apenas 2,38%)*
-* **Explicabilidade:** Análise global e local via **SHAP**.
+<h3>1. Classificação Tabular (Breast Cancer Wisconsin)</h3>
+<ul>
+  <li><strong>Modelo:</strong> Regressão Logística + StandardScaler</li>
+  <li><strong>Acurácia:</strong> 98,25%</li>
+  <li><strong>Recall (Casos Malignos):</strong> 97,62% <em>(Taxa de omissão de apenas 2,38%)</em></li>
+  <li><strong>Explicabilidade:</strong> Análise global e local via <strong>SHAP</strong>.</li>
+</ul>
 
-### 2. Visão Computacional (Breast Ultrasound Images - BUSI)
-* **Modelo:** Transfer Learning com MobileNetV2
-* **Acurácia:** 71,00% (Classificação Multiclasse: Benigno / Maligno / Normal)
-* **Explicabilidade:** Mapas de ativação visual via **Grad-CAM**.
+<h3>2. Visão Computacional (Breast Ultrasound Images - BUSI)</h3>
+<ul>
+  <li><strong>Modelo:</strong> Transfer Learning com MobileNetV2</li>
+  <li><strong>Acurácia:</strong> 71,00% (Classificação Multiclasse: Benigno / Maligno / Normal)</li>
+  <li><strong>Explicabilidade:</strong> Mapas de ativação visual via <strong>Grad-CAM</strong>.</li>
+</ul>
 
----
+<hr>
 
-## 📁 Datasets Utilizados
+<h2>📁 Datasets Utilizados</h2>
 
-* **Dados Tabulares:** [Breast Cancer Wisconsin (Diagnostic)](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)) - UCI Machine Learning Repository.
-* **Imagens de Ultrassom:** [Dataset of Breast Ultrasound Images (BUSI)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) - Kaggle.
+<ul>
+  <li><strong>Dados Tabulares:</strong> <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)">Breast Cancer Wisconsin (Diagnostic)</a> - UCI Machine Learning Repository.</li>
+  <li><strong>Imagens de Ultrassom:</strong> <a href="https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset">Dataset of Breast Ultrasound Images (BUSI)</a> - Kaggle.</li>
+</ul>
 
----
+<hr>
 
-## 📂 Estrutura do Repositório
+<h2>📂 Estrutura do Repositório</h2>
 
-```text
-├── data/
+<pre><code>├── data/
 │   ├── breast_cancer_wisconsin.csv       # Dataset tabular do repositório UCI
 │   └── breast_ultrasound_dataset_info.md  # Link de download e instruções do dataset BUSI
 ├── models/
@@ -60,11 +69,12 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 │   ├── modelo_breast_cancer.pkl          # Modelo tabular treinado (Regressão Logística)
 │   └── scaler.pkl                        # Escalador das variáveis tabulares (StandardScaler)
 ├── notebooks/
-│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular & SHAP
-│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional & Grad-CAM
+│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular &amp; SHAP
+│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM
 ├── README.md                             # Documentação do repositório
-└── requirements.txt                      # Dependências do projeto
-```
+└── requirements.txt                      # Dependências do projeto</code></pre>
+
+<hr>
 
 <h2>🚀 Como Executar o Projeto no Google Colab</h2>
 
@@ -76,14 +86,14 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 
 <ul>
   <li>
-    <strong>Notebook 1 (Dados Tabulares - Wisconsin & SHAP):</strong><br>
-    <a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+    <strong>Notebook 1 (Dados Tabulares - Wisconsin &amp; SHAP):</strong><br>
+    <a href="https://colab.research.google.com/github/SEU_USUARIO/SEU_REPOSITORIO/blob/main/notebooks/01_classificacao_tabular_wisconsin.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   </li>
   <br>
   <li>
-    <strong>Notebook 2 (Visão Computacional - BUSI & Grad-CAM):</strong><br>
+    <strong>Notebook 2 (Visão Computacional - BUSI &amp; Grad-CAM):</strong><br>
     <em>(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4)</em><br>
-    <a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+    <a href="https://colab.research.google.com/github/SEU_USUARIO/SEU_REPOSITORIO/blob/main/notebooks/02_visao_computacional_cnn_busi.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   </li>
 </ul>
 
