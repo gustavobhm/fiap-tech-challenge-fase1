@@ -5,10 +5,7 @@ Este repositório contém a solução do **Tech Challenge (Fase 1)** da Pós-Gra
 ---
 
 ## 👥 Integrantes do Grupo
-* **Anderson**
 * **Gustavo**
-* **Ricardo**
-* **Rocélio**
 
 ---
 
