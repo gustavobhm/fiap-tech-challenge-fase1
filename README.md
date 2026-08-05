@@ -33,7 +33,7 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 │   └── 02_visao_computacional_cnn_busi.ipynb     # Notebook 2: Visão Computacional & Grad-CAM
 ├── README.md                                     # Documentação do repositório
 └── requirements.txt                              # Dependências do projeto
-
+```
 
 ## 🚀 Como Executar o Projeto no Google Colab
 
