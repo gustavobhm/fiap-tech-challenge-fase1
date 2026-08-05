@@ -66,26 +66,36 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 └── requirements.txt                      # Dependências do projeto
 ```
 
-🚀 Como Executar o Projeto no Google Colab
-Os notebooks foram desenvolvidos e otimizados para execução direta no Google Colab.
+<h2>🚀 Como Executar o Projeto no Google Colab</h2>
 
-Opção 1: Abrir diretamente pelos links (Recomendado)
-Você pode abrir e rodar os notebooks diretamente no Google Colab clicando nos botões abaixo:
+<p>Os notebooks foram desenvolvidos e otimizados para execução direta no <strong>Google Colab</strong>.</p>
 
-Notebook 1 (Dados Tabulares - Wisconsin & SHAP):
+<h3>Opção 1: Abrir diretamente pelos links (Recomendado)</h3>
 
-Notebook 2 (Visão Computacional - BUSI & Grad-CAM):
+<p>Você pode abrir e rodar os notebooks diretamente no Google Colab clicando nos botões abaixo:</p>
 
-(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução > Alterar o tipo de ambiente de execução > GPU T4)
+<ul>
+  <li>
+    <strong>Notebook 1 (Dados Tabulares - Wisconsin & SHAP):</strong><br>
+    <a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+  </li>
+  <br>
+  <li>
+    <strong>Notebook 2 (Visão Computacional - BUSI & Grad-CAM):</strong><br>
+    <em>(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4)</em><br>
+    <a href="https://colab.research.google.com/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+  </li>
+</ul>
 
-Opção 2: Passo a Passo Manual no Colab
-Acesse o Google Colab.
+<hr>
 
-Vá em File > Upload Notebook (Arquivo > Fazer upload do notebook) e envie o arquivo .ipynb desejado da pasta notebooks/.
+<h3>Opção 2: Passo a Passo Manual no Colab</h3>
 
-Para o Notebook 2 (Visão Computacional), certifique-se de ativar a GPU gratuita do Colab indo no menu superior em: Ambiente de execução > Alterar o tipo de ambiente de execução > GPU T4.
+<ol>
+  <li>Acesse o <a href="https://colab.research.google.com/">Google Colab</a>.</li>
+  <li>Vá em <strong>File &gt; Upload Notebook</strong> (Arquivo &gt; Fazer upload do notebook) e envie o arquivo <code>.ipynb</code> desejado da pasta <code>notebooks/</code>.</li>
+  <li>Para o <strong>Notebook 2 (Visão Computacional)</strong>, certifique-se de ativar a GPU gratuita do Colab indo no menu superior em: <code>Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4</code>.</li>
+  <li>Na primeira célula do notebook, as dependências necessárias serão instaladas automaticamente executando:</li>
+</ol>
 
-Na primeira célula do notebook, as dependências necessárias serão instaladas automaticamente executando:
-
-Bash
-!pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib
+<pre><code>!pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib</code></pre>
