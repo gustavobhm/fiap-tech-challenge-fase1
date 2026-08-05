@@ -33,32 +33,3 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 │   └── 02_visao_computacional_cnn_busi.ipynb     # Notebook 2: Visão Computacional & Grad-CAM
 ├── README.md                                     # Documentação do repositório
 └── requirements.txt                              # Dependências do projeto
-
-
-
-🚀 Como Executar o Projeto no Google Colab
-Os notebooks foram desenvolvidos e otimizados para execução direta e 100% online no Google Colab.
-
-Opção 1: Abrir diretamente pelos links (Recomendado)
-Você pode abrir e rodar os notebooks diretamente no Google Colab clicando nos botões abaixo:
-
-Notebook 1 (Dados Tabulares - Wisconsin & SHAP):
-
-Notebook 2 (Visão Computacional - BUSI & Grad-CAM):
-
-(Recomendado ativar a aceleração por GPU no menu: Editar > Configurações do notebook > Acelerador de hardware > GPU T4)
-
-Opção 2: Passo a Passo Manual no Colab
-Acesse o Google Colab.
-
-Vá em File > Upload Notebook (Arquivo > Fazer upload do notebook) e envie o arquivo .ipynb desejado da pasta notebooks/.
-
-Na primeira célula do notebook, as dependências necessárias serão instaladas automaticamente executando:
-
-Python
-!pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib
-Para o Notebook 2 (Visão Computacional), certifique-se de ativar a GPU gratuita do Colab indo no menu superior em:
-
-Ambiente de execução > Alterar o tipo de ambiente de execução > Selecionar GPU T4.
-
-Execute as células sequencialmente (Shift + Enter ou clicando no botão "Play" em Ambiente de execução > Executar tudo). Os datasets e dependências serão baixados automaticamente durante a execução das primeiras células do notebook.
