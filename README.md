@@ -22,14 +22,14 @@ O sistema é dividido em dois pilares complementares de Inteligência Artificial
 
 ```text
 ├── data/
-│   ├── breast_cancer_wisconsin.csv     # Dataset tabular do repositório UCI
-│   └── Dataset_BUSI_with_GT.zip        # Arquivo compactado com imagens de ultrassom
+│   ├── breast_cancer_wisconsin.csv               # Dataset tabular do repositório UCI
+│   └── breast_ultrasound_dataset_info.md         # Link de download e instruções do dataset BUSI
 ├── models/
-│   ├── mobilenetv2_busi_best.keras    # Modelo de visão computacional treinado (MobileNetV2)
-│   ├── modelo_breast_cancer.pkl       # Modelo tabular treinado (Regressão Logística)
-│   └── scaler.pkl                     # Escalador das variáveis tabulares (StandardScaler)
+│   ├── mobilenetv2_busi_best.keras               # Modelo de visão computacional treinado (MobileNetV2)
+│   ├── modelo_breast_cancer.pkl                  # Modelo tabular treinado (Regressão Logística)
+│   └── scaler.pkl                                # Escalador das variáveis tabulares (StandardScaler)
 ├── notebooks/
 │   ├── 01_classificacao_tabular_wisconsin.ipynb  # Notebook 1: Análise Tabular & SHAP
 │   └── 02_visao_computacional_cnn_busi.ipynb     # Notebook 2: Visão Computacional & Grad-CAM
-├── README.md                          # Documentação do repositório
-└── requirements.txt                   # Dependências do projeto
+├── README.md                                     # Documentação do repositório
+└── requirements.txt                              # Dependências do projeto
