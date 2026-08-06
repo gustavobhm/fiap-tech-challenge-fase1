@@ -44,7 +44,7 @@
 <h3>2. Visão Computacional (Breast Ultrasound Images - BUSI)</h3>
 <ul>
   <li><strong>Modelo:</strong> Transfer Learning com MobileNetV2</li>
-  <li><strong>Acurácia:</strong> 71,00% (Classificação Multiclasse: Benigno / Maligno / Normal)</li>
+  <li><strong>Acurácia:</strong> 70,00% (Classificação Multiclasse: Benigno / Maligno / Normal)</li>
   <li><strong>Explicabilidade:</strong> Mapas de ativação visual via <strong>Grad-CAM</strong>.</li>
 </ul>
 
