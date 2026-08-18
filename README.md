@@ -28,13 +28,13 @@
 
 <h3>📍 Módulo Principal (Obrigatório): Classificação Tabular &amp; Explicabilidade</h3>
 <ul>
-  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com pré-processamento via <code>StandardScaler</code> e explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>[cite: 1, 3].</li>
+  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com pré-processamento via <code>StandardScaler</code> e explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>.</li>
 </ul>
 
 <h3>📍 Módulo Complementar (EXTRA): Visão Computacional &amp; MLOps</h3>
 <ul>
-  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal) utilizando Transfer Learning e validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>[cite: 2, 3].</li>
-  <li><strong>Conteinerização &amp; MLOps:</strong> Suporte a execução em ambientes isolados via <strong>Dockerfile</strong>[cite: 3] e pacotes de dependências versionados em <code>requirements.txt</code>[cite: 3].</li>
+  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal) utilizando Transfer Learning e validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>.</li>
+  <li><strong>Conteinerização &amp; MLOps:</strong> Suporte a execução em ambientes isolados via <strong>Dockerfile</strong> e pacotes de dependências versionados em <code>requirements.txt</code>.</li>
 </ul>
 
 <hr>
@@ -52,19 +52,19 @@
   <tbody>
     <tr>
       <td><strong>Algoritmo</strong></td>
-      <td>Regressão Logística + StandardScaler[cite: 1, 3]</td>
+      <td>Regressão Logística + StandardScaler</td>
     </tr>
     <tr>
       <td><strong>Acurácia</strong></td>
-      <td>98,25%[cite: 1, 3]</td>
+      <td>98,25%</td>
     </tr>
     <tr>
       <td><strong>Recall (Maligno)</strong></td>
-      <td>97,62% <em>(Taxa de omissão de apenas 2,38%)</em>[cite: 1, 3]</td>
+      <td>97,62% <em>(Taxa de omissão de apenas 2,38%)</em></td>
     </tr>
     <tr>
       <td><strong>Explicabilidade</strong></td>
-      <td>SHAP (Análise de impacto e relevância das variáveis)[cite: 1, 3]</td>
+      <td>SHAP (Análise de impacto e relevância das variáveis)</td>
     </tr>
   </tbody>
 </table>
@@ -80,19 +80,19 @@
   <tbody>
     <tr>
       <td><strong>Abordagem</strong></td>
-      <td>Transfer Learning (MobileNetV2) + Dropout(0.5)[cite: 2, 3]</td>
+      <td>Transfer Learning (MobileNetV2) + Dropout(0.5)</td>
     </tr>
     <tr>
       <td><strong>Classes</strong></td>
-      <td>Benigno / Maligno / Normal[cite: 2, 3]</td>
+      <td>Benigno / Maligno / Normal</td>
     </tr>
     <tr>
       <td><strong>Acurácia</strong></td>
-      <td>~70,00%[cite: 3]</td>
+      <td>~70,00%</td>
     </tr>
     <tr>
       <td><strong>Explicabilidade</strong></td>
-      <td>Mapas de Ativação Térmicos por Grad-CAM (3 colunas)[cite: 2, 3]</td>
+      <td>Mapas de Ativação Térmicos por Grad-CAM (3 colunas)</td>
     </tr>
   </tbody>
 </table>
@@ -115,15 +115,15 @@
 │   ├── breast_cancer_wisconsin.csv         # Dataset tabular do repositório UCI
 │   └── breast_ultrasound_dataset_info.md   # Instruções e origem do dataset BUSI
 ├── models/
-│   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado[cite: 2, 3]
-│   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística)[cite: 1, 3]
-│   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler)[cite: 1, 3]
+│   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado
+│   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística)
+│   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler)
 ├── notebooks/
-│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular &amp; SHAP[cite: 1, 3]
-│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM[cite: 2, 3]
-├── Dockerfile                              # Configuração do container para a aplicação[cite: 3]
+│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular &amp; SHAP
+│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM
+├── Dockerfile                              # Configuração do container para a aplicação
 ├── README.md                               # Documentação do repositório
-└── requirements.txt                        # Dependências e bibliotecas do projeto[cite: 3]</code></pre>
+└── requirements.txt                        # Dependências e bibliotecas do projeto</code></pre>
 
 <hr>
 
@@ -159,7 +159,7 @@
 
 <h3>Opção 2: Execução Local via Docker</h3>
 
-<p>Para construir e rodar a aplicação em um ambiente isolado conteinerizado[cite: 3]:</p>
+<p>Para construir e rodar a aplicação em um ambiente isolado conteinerizado:</p>
 
 <ol>
   <li><strong>Construir a imagem Docker:</strong>
