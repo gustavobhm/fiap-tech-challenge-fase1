@@ -1,6 +1,6 @@
-<h1>🩺 Tech Challenge - Fases 1 e 2 | Pós-Graduação FIAP</h1>
+<h1>🩺 Tech Challenge - Fase 1 | Pós-Graduação FIAP</h1>
 
-<p>Este repositório contém a solução integrada do <strong>Tech Challenge (Fase 1 e Fase 2)</strong> da Pós-Graduação em Inteligência Artificial para Devs da FIAP. O projeto consiste em um sistema de suporte ao diagnóstico médico de câncer de mama utilizando uma <strong>abordagem multimodal</strong>, combinando análise estatística/preditiva de dados tabulares e visão computacional avançada em imagens de ultrassom.</p>
+<p>Este repositório contém a solução integrada do <strong>Tech Challenge (Fase 1)</strong> da Pós-Graduação em Inteligência Artificial para Devs da FIAP. O projeto consiste em um sistema de suporte ao diagnóstico médico de câncer de mama utilizando uma <strong>abordagem multimodal</strong>, combinando análise estatística/preditiva de dados tabulares e visão computacional avançada em imagens de ultrassom.</p>
 
 <hr>
 
@@ -12,100 +12,87 @@
 
 <hr>
 
-<h2>🎥 Vídeos de Demonstração do Projeto</h2>
+<h2>🎥 Vídeo de Demonstração do Projeto</h2>
 
-<p>Acesse as apresentações completas da solução, cobrindo a arquitetura, código dos notebooks e análises de explicabilidade (SHAP e Grad-CAM):</p>
+<p>Acesse a apresentação completa da solução, cobrindo a arquitetura, execução dos notebooks, infraestrutura MLOps/Docker e análises de explicabilidade (SHAP e Grad-CAM):</p>
 
 <ul>
-  <li>🎬 <strong><a href="COLOQUE_SEU_LINK_FASE1_AQUI" target="_blank">Assistir ao Vídeo da Fase 1 no YouTube</a></strong></li>
-  <li>🎬 <strong><a href="COLOQUE_SEU_LINK_FASE2_AQUI" target="_blank">Assistir ao Vídeo da Fase 2 no YouTube</a></strong></li>
+  <li>🎬 <strong><a href="COLOQUE_SEU_LINK_DO_YOUTUBE_AQUI" target="_blank">Assistir ao Vídeo de Demonstração no YouTube</a></strong></li>
 </ul>
 
 <hr>
 
 <h2>🎯 Escopo do Projeto</h2>
 
-<p>O sistema foi desenvolvido de forma incremental ao longo de duas fases complementares de Inteligência Artificial:</p>
+<p>O sistema foi desenvolvido de forma modular, composto por uma solução base obrigatória e aprimoramentos complementares para maximizar o desempenho e a aplicabilidade clínica:</p>
 
-<h3>📍 FASE 1: Fundamentos, Aprendizado Supervisionado &amp; Explicabilidade</h3>
+<h3>📍 Módulo Principal (Obrigatório): Classificação Tabular &amp; Explicabilidade</h3>
 <ul>
-  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com pré-processamento via <code>StandardScaler</code> e explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>.</li>
-  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal) utilizando Transfer Learning e validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>.</li>
+  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com pré-processamento via <code>StandardScaler</code> e explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>[cite: 1, 3].</li>
 </ul>
 
-<h3>📍 FASE 2: Evolução de Arquiteturas, MLOps e Conteinerização</h3>
+<h3>📍 Módulo Complementar (EXTRA): Visão Computacional &amp; MLOps</h3>
 <ul>
-  <li><strong>Aprimoramento Tabular:</strong> Reavaliação e otimização do pipeline de dados tabulares, refatoração de escaladores e persistência de artefatos.</li>
-  <li><strong>Otimização de Visão Computacional:</strong> Refinamento dos hiperparâmetros de Transfer Learning na MobileNetV2, melhoria no tratamento de overfitting e validação com Grad-CAM.</li>
-  <li><strong>Conteinerização &amp; MLOps:</strong> Criação de suporte a execução via ambientes isolados (<code>Dockerfile</code>) e pacotes de dependências atualizados (<code>requirements.txt</code>).</li>
+  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal) utilizando Transfer Learning e validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>[cite: 2, 3].</li>
+  <li><strong>Conteinerização &amp; MLOps:</strong> Suporte a execução em ambientes isolados via <strong>Dockerfile</strong>[cite: 3] e pacotes de dependências versionados em <code>requirements.txt</code>[cite: 3].</li>
 </ul>
 
 <hr>
 
-<h2>📊 Métricas e Resultados</h2>
+<h2>📊 Métricas e Resultados dos Modelos</h2>
 
-<h3>1. Classificação Tabular (Breast Cancer Wisconsin)</h3>
+<h3>1. Classificação Tabular (Breast Cancer Wisconsin - Módulo Principal)</h3>
 <table>
   <thead>
     <tr>
       <th>Métrica</th>
-      <th>Fase 1 (Base)</th>
-      <th>Fase 2 (Refinado)</th>
+      <th>Resultado (Regressão Logística Otimizada)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Algoritmo</strong></td>
-      <td>Regressão Logística + StandardScaler</td>
-      <td>Regressão Logística Otimizada</td>
+      <td>Regressão Logística + StandardScaler[cite: 1, 3]</td>
     </tr>
     <tr>
       <td><strong>Acurácia</strong></td>
-      <td>98,25%</td>
-      <td>98,25%</td>
+      <td>98,25%[cite: 1, 3]</td>
     </tr>
     <tr>
       <td><strong>Recall (Maligno)</strong></td>
-      <td>97,62% <em>(Taxa de omissão de 2,38%)</em></td>
-      <td>97,62%</td>
+      <td>97,62% <em>(Taxa de omissão de apenas 2,38%)</em>[cite: 1, 3]</td>
     </tr>
     <tr>
       <td><strong>Explicabilidade</strong></td>
-      <td>SHAP (Análise de impacto das variáveis)</td>
-      <td>SHAP (Análise comparativa)</td>
+      <td>SHAP (Análise de impacto e relevância das variáveis)[cite: 1, 3]</td>
     </tr>
   </tbody>
 </table>
 
-<h3>2. Visão Computacional (Breast Ultrasound Images - BUSI)</h3>
+<h3>2. Visão Computacional (Breast Ultrasound Images - BUSI - Módulo Complementar/EXTRA)</h3>
 <table>
   <thead>
     <tr>
       <th>Métrica</th>
-      <th>Fase 1 (MobileNetV2)</th>
-      <th>Fase 2 (MobileNetV2 Refinado)</th>
+      <th>Resultado (MobileNetV2 Refinado)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Abordagem</strong></td>
-      <td>Transfer Learning (MobileNetV2)</td>
-      <td>Transfer Learning + Otimização de Camadas</td>
+      <td>Transfer Learning (MobileNetV2) + Dropout(0.5)[cite: 2, 3]</td>
     </tr>
     <tr>
       <td><strong>Classes</strong></td>
-      <td>Benigno / Maligno / Normal</td>
-      <td>Benigno / Maligno / Normal</td>
+      <td>Benigno / Maligno / Normal[cite: 2, 3]</td>
     </tr>
     <tr>
       <td><strong>Acurácia</strong></td>
-      <td>~70,00%</td>
-      <td>~70,00%+</td>
+      <td>~70,00%[cite: 3]</td>
     </tr>
     <tr>
       <td><strong>Explicabilidade</strong></td>
-      <td>Mapas de Ativação Grad-CAM</td>
-      <td>Mapas de Ativação Grad-CAM</td>
+      <td>Mapas de Ativação Térmicos por Grad-CAM (3 colunas)[cite: 2, 3]</td>
     </tr>
   </tbody>
 </table>
@@ -128,21 +115,21 @@
 │   ├── breast_cancer_wisconsin.csv         # Dataset tabular do repositório UCI
 │   └── breast_ultrasound_dataset_info.md   # Instruções e origem do dataset BUSI
 ├── models/
-│   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado
-│   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística)
-│   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler)
+│   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado[cite: 2, 3]
+│   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística)[cite: 1, 3]
+│   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler)[cite: 1, 3]
 ├── notebooks/
-│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular &amp; SHAP
-│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM
-├── Dockerfile                              # Configuração do container para a aplicação
+│   ├── 01_classificacao_tabular_wisconsin.ipynb # Notebook 1: Análise Tabular &amp; SHAP[cite: 1, 3]
+│   └── 02_visao_computacional_cnn_busi.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM[cite: 2, 3]
+├── Dockerfile                              # Configuração do container para a aplicação[cite: 3]
 ├── README.md                               # Documentação do repositório
-└── requirements.txt                        # Dependências e bibliotecas do projeto</code></pre>
+└── requirements.txt                        # Dependências e bibliotecas do projeto[cite: 3]</code></pre>
 
 <hr>
 
 <h2>🚀 Como Executar o Projeto</h2>
 
-<h3>Opção 1: Execução no Google Colab (Recomendado para Treinamento)</h3>
+<h3>Opção 1: Execução no Google Colab (Recomendado)</h3>
 
 <p>Você pode abrir e executar os notebooks diretamente no Google Colab:</p>
 
@@ -170,9 +157,9 @@
 
 <hr>
 
-<h3>Opção 2: Execução Local via Docker (Fase 2)</h3>
+<h3>Opção 2: Execução Local via Docker</h3>
 
-<p>Para construir e rodar a aplicação em um ambiente isolado conteinerizado:</p>
+<p>Para construir e rodar a aplicação em um ambiente isolado conteinerizado[cite: 3]:</p>
 
 <ol>
   <li><strong>Construir a imagem Docker:</strong>
