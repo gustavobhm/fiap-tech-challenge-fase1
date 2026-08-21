@@ -121,11 +121,11 @@
 
 <h2>📄 Relatórios Técnicos em PDF</h2>
 
-<p>Os relatórios técnicos impressos exigidos pelo desafio foram gerados dinamicamente via código e estão disponíveis na raiz do repositório:</p>
+<p>Os relatórios técnicos impressos exigidos pelo desafio foram gerados dinamicamente via código e estão disponíveis na pasta <code>reports/</code> do repositório:</p>
 
 <ul>
-  <li>📄 <strong><a href="Relatorio_Tecnico_Oficial_Wisconsin.pdf" target="_blank">Relatório Técnico 1 - Dados Tabulares (Wisconsin) PDF</a></strong></li>
-  <li>📄 <strong><a href="Relatorio_Tecnico_Oficial_Visao_BUSI.pdf" target="_blank">Relatório Técnico 2 - Visão Computacional (BUSI) PDF</a></strong></li>
+  <li>📄 <strong><a href="reports/Relatorio_Tecnico_Oficial_Wisconsin%20.pdf" target="_blank">Relatório Técnico 1 - Dados Tabulares (Wisconsin) PDF</a></strong></li>
+  <li>📄 <strong><a href="reports/Relatorio_Tecnico_Oficial_Visao_BUSI.pdf" target="_blank">Relatório Técnico 2 - Visão Computacional (BUSI) PDF</a></strong></li>
 </ul>
 
 <hr>
@@ -151,11 +151,12 @@
 │   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler .pkl)
 ├── notebooks/
 │   ├── 01_classificacao_tabular_wisconsin_V11.ipynb # Notebook 1: Análise Tabular &amp; SHAP
-│   └── 02_visao_computacional_cnn_busi_v9_2.ipynb    # Notebook 2: Visão Computacional &amp; Grad-CAM
+│   └── 02_visao_computacional_cnn_busi_v9.ipynb     # Notebook 2: Visão Computacional &amp; Grad-CAM
+├── reports/
+│   ├── Relatorio_Tecnico_Oficial_Visao_BUSI.pdf  # Relatório técnico oficial (Visão)
+│   └── Relatorio_Tecnico_Oficial_Wisconsin .pdf  # Relatório técnico oficial (Tabular)
 ├── Dockerfile                              # Configuração do container para a aplicação
 ├── README.md                               # Documentação técnica do repositório
-├── Relatorio_Tecnico_Oficial_Wisconsin.pdf # Relatório técnico impresso (Tabular)
-├── Relatorio_Tecnico_Oficial_Visao_BUSI.pdf # Relatório técnico impresso (Visão)
 └── requirements.txt                        # Dependências e bibliotecas do projeto</code></pre>
 
 <hr>
@@ -177,7 +178,7 @@
   <li>
     <strong>Notebook 2 (Visão Computacional - BUSI &amp; Grad-CAM):</strong><br>
     <em>(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4)</em><br>
-    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi_v9_2.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi_v9.ipynb" target="_blank">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     </a>
   </li>
