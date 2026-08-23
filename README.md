@@ -154,15 +154,15 @@
 
 <pre><code>fiap-tech-challenge-fase1/
 ├── data/
-│   ├── breast_cancer_wisconsin.csv         # Dataset tabular do repositório UCI
-│   └── breast_ultrasound_dataset_info.md   # Instruções e origem do dataset BUSI
+│   ├── breast_ultrasound_dataset_info.md   # Instruções e origem do dataset BUSI
+│   └── breast_cancer_wisconsin.csv         # Dataset tabular do repositório UCI
 ├── models/
 │   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado (.keras)
 │   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística .pkl)
 │   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler .pkl)
 ├── notebooks/
-│   ├── 01_classificacao_tabular_wisconsin_V11.ipynb # Notebook 1: Análise Tabular &amp; SHAP
-│   └── 02_visao_computacional_cnn_busi_v9.ipynb     # Notebook 2: Visão Computacional &amp; Grad-CAM
+│   ├── 01_classificacao_tabular_wisconsin_V12.ipynb # Notebook 1: Análise Tabular &amp; SHAP
+│   └── 02_visao_computacional_cnn_busi_v10.ipynb     # Notebook 2: Visão Computacional &amp; Grad-CAM
 ├── reports/
 │   ├── Relatorio_Tecnico_Oficial_Visao_BUSI.pdf  # Relatório técnico oficial (Visão)
 │   └── Relatorio_Tecnico_Oficial_Wisconsin.pdf   # Relatório técnico oficial (Tabular)
@@ -181,7 +181,7 @@
 <ul>
   <li>
     <strong>Notebook 1 (Dados Tabulares - Wisconsin &amp; SHAP):</strong><br />
-    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/01_classificacao_tabular_wisconsin_V11.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/01_classificacao_tabular_wisconsin_V12.ipynb" target="_blank">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
     </a>
   </li>
@@ -189,7 +189,7 @@
   <li>
     <strong>Notebook 2 (Visão Computacional - BUSI &amp; Grad-CAM):</strong><br />
     <em>(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4)</em><br />
-    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi_v9.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi_v10.ipynb" target="_blank">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
     </a>
   </li>
