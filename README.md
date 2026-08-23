@@ -1,213 +1,216 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README - Tech Challenge Fase 1</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            max-width: 880px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: #ffffff;
-        }
-        h1 {
-            color: #1a365d;
-            border-bottom: 2px solid #2b6cb0;
-            padding-bottom: 8px;
-        }
-        h2 {
-            color: #2b6cb0;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 6px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #2d3748;
-        }
-        code {
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            font-size: 0.9em;
-            color: #c53030;
-        }
-        pre {
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 16px;
-            overflow-x: auto;
-        }
-        pre code {
-            background-color: transparent;
-            border: none;
-            padding: 0;
-            color: #2d3748;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 6px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #cbd5e0;
-            padding: 10px 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #2b6cb0;
-            color: #ffffff;
-        }
-        tr:nth-child(even) {
-            background-color: #f7fafc;
-        }
-        .callout {
-            background-color: #ebf8ff;
-            border-left: 4px solid #3182ce;
-            padding: 12px 16px;
-            margin: 16px 0;
-            border-radius: 0 4px 4px 0;
-        }
-        a {
-            color: #2b6cb0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+<div align="center">
+  <h1>🩺 Tech Challenge - Fase 1 | Pós-Graduação FIAP</h1>
+  <p><b>Inteligência Artificial para Devs — FIAP</b></p>
 
-    <h1>Tech Challenge Fase 1 — Diagnosis ML &amp; Vision</h1>
-    <p><strong>FIAP — Pós-Tech em Machine Learning Engineering</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" alt="Python 3.10" />
+    <img src="https://img.shields.io/badge/TensorFlow-2.12-orange?style=for-the-badge&logo=tensorflow" alt="TensorFlow" />
+    <img src="https://img.shields.io/badge/Scikit--Learn-1.2-blue?style=for-the-badge&logo=scikit-learn" alt="Scikit-Learn" />
+    <img src="https://img.shields.io/badge/Docker-Conteinerizado-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+    <img src="https://img.shields.io/badge/Google%20Colab-Executar-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Colab" />
+  </p>
+</div>
 
-    <div class="callout">
-        <strong>📌 Visão Geral do Projeto:</strong><br>
-        Esta solução integra dois pilares fundamentais de Inteligência Artificial aplicada ao diagnóstico de câncer de mama:
-        <ul>
-            <li><strong>Modelagem Tabular:</strong> Classificação preditiva de tumores clínicos com base no banco de dados <em>Wisconsin Breast Cancer</em>.</li>
-            <li><strong>Visão Computacional &amp; Deep Learning:</strong> Diagnóstico automatizado e explicabilidade visual via exames de ecografia e ultrassom (Dataset <em>BUSI</em>).</li>
-        </ul>
-    </div>
+<p>Este repositório contém a solução integrada do <strong>Tech Challenge (Fase 1)</strong> da Pós-Graduação em Inteligência Artificial para Devs da FIAP. O projeto consiste em um sistema de suporte ao diagnóstico médico de câncer de mama utilizando uma <strong>abordagem multimodal</strong>, combinando análise estatística/preditiva de dados tabulares e visão computacional avançada em imagens de ultrassom.</p>
 
-    <h2>📁 Estrutura do Repositório</h2>
-    <pre><code>Tech_Challenge_V4/
-├── data/                   # Datasets utilizados no projeto (Tabular e Imagens)
-├── models/                 # Artefatos treinados e salvos
-│   ├── modelo_breast_cancer.pkl    # Modelo Tabular de Classificação
-│   ├── scaler_breast_cancer.pkl    # Padronizador de Atributos Tabulares
-│   └── mobilenetv2_busi_best.keras # Rede Neural Convolucional (CNN)
-├── notebooks/              # Pipelines de Análise e Treinamento
-│   ├── 01_modelo_tabular_wisconsin.ipynb
-│   └── 02_visao_computacional_cnn_busi_v9.ipynb
-├── reports/                # Relatórios Técnicos Gerados em PDF via ReportLab
-├── Dockerfile              # Receita de conteinerização do projeto
-├── requirements.txt        # Dependências do ambiente Python
-└── README.md               # Documentação técnica oficial</code></pre>
+<hr />
 
-    <h2>🧠 Arquiteturas e Modelos</h2>
-    
-    <h3>1. Modelo Tabular (Wisconsin Breast Cancer)</h3>
-    <ul>
-        <li><strong>Objetivo:</strong> Identificação precoce de malignidade em massas mamárias a partir de características morfológicas das células.</li>
-        <li><strong>Pré-processamento:</strong> Remoção de outliers, normalização de atributos via <code>StandardScaler</code> e balanceamento estratégico.</li>
-        <li><strong>Artefatos:</strong> Exportados em formato pickle (<code>.pkl</code>) para inferência em produção.</li>
-    </ul>
+<h2>👥 Integrantes do Grupo</h2>
 
-    <h3>2. Visão Computacional (BUSI Dataset)</h3>
-    <ul>
-        <li><strong>Objetivo:</strong> Classificação de ultrassografias mamárias nas categorias <code>benign</code>, <code>malignant</code> e <code>normal</code>.</li>
-        <li><strong>Arquitetura:</strong> <em>Transfer Learning</em> utilizando a base <strong>MobileNetV2</strong> pré-treinada no ImageNet, acoplada a uma cabeça customizada com <code>GlobalAveragePooling2D</code> e regularização por <code>Dropout(0.5)</code>.</li>
-        <li><strong>Data Augmentation:</strong> Rotações, translações espaciais e espelhamentos para mitigação de <em>overfitting</em>.</li>
-        <li><strong>Explicabilidade (Grad-CAM):</strong> Mapeamento térmico de ativação para auditoria visual da decisão médica do modelo.</li>
-        <li><strong>Artefato:</strong> Modelo exportado no formato nativo Keras (<code>.keras</code>).</li>
-    </ul>
+<ul>
+  <li><strong>Gustavo Luis dos Santos</strong></li>
+</ul>
 
-    <h2>📊 Métricas de Desempenho (Visão Computacional)</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Diagnóstico / Classe</th>
-                <th>Precision</th>
-                <th>Recall (Sensibilidade)</th>
-                <th>F1-Score</th>
-                <th>Amostras (Support)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>benign</strong></td>
-                <td>0.83</td>
-                <td>0.75</td>
-                <td>0.79</td>
-                <td>87</td>
-            </tr>
-            <tr>
-                <td><strong>malignant</strong></td>
-                <td>0.69</td>
-                <td>0.74</td>
-                <td>0.71</td>
-                <td>42</td>
-            </tr>
-            <tr>
-                <td><strong>normal</strong></td>
-                <td>0.70</td>
-                <td>0.85</td>
-                <td>0.77</td>
-                <td>27</td>
-            </tr>
-            <tr>
-                <td><strong>Accuracy Geral</strong></td>
-                <td colspan="2">—</td>
-                <td><strong>0.76</strong></td>
-                <td><strong>156</strong></td>
-            </tr>
-        </tbody>
-    </table>
+<hr />
 
-    <h2>🚀 Como Executar o Projeto</h2>
+<h2>🎥 Vídeo de Demonstração do Projeto</h2>
 
-    <h3>Execução Local</h3>
-    <p>1. Clone o repositório e acesse a pasta do projeto:</p>
-    <pre><code>git clone https://github.com/gustavobhm/fiap-tech-challenge-fase1.git
-cd Tech_Challenge_V4</code></pre>
+<p>Acesse a apresentação completa da solução, cobrindo a arquitetura, execução dos notebooks, infraestrutura MLOps/Docker e análises de explicabilidade (SHAP e Grad-CAM):</p>
 
-    <p>2. Crie e ative um ambiente virtual (opcional, mas recomendado):</p>
-    <pre><code>python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate</code></pre>
+<ul>
+  <li>🎬 <strong><a href="COLOQUE_SEU_LINK_DO_YOUTUBE_AQUI" target="_blank">Assistir ao Vídeo de Demonstração no YouTube</a></strong></li>
+</ul>
 
-    <p>3. Instale as dependências requisitadas:</p>
-    <pre><code>pip install -r requirements.txt</code></pre>
+<hr />
 
-    <p>4. Execute a aplicação do dashboard/inferência:</p>
-    <pre><code>streamlit run app.py</code></pre>
+<h2>🎯 Escopo do Projeto</h2>
 
-    <h3>Execução via Docker</h3>
-    <p>1. Construa a imagem Docker:</p>
-    <pre><code>docker build -t tech-challenge-v4 .</code></pre>
+<p>O sistema foi desenvolvido de forma modular, composto por uma solução base obrigatória e aprimoramentos complementares para maximizar o desempenho e a aplicabilidade clínica:</p>
 
-    <p>2. Inicie o contêiner:</p>
-    <pre><code>docker run -p 8501:8501 tech-challenge-v4</code></pre>
-    <p>Acesse a interface no seu navegador através do endereço: <code>http://localhost:8501</code></p>
+<h3>📍 Módulo Principal (Obrigatório): Classificação Tabular &amp; Explicabilidade</h3>
+<ul>
+  <li><strong>Modelo Tabular (Regressão Logística):</strong> Treinado no dataset <em>Breast Cancer Wisconsin</em> para classificação binária (Maligno / Benigno). Conta com pré-processamento via <code>StandardScaler</code> e explicabilidade global e local através de <strong>SHAP (SHapley Additive exPlanations)</strong>.</li>
+</ul>
 
-    <h2>🔗 Links Úteis e Recursos</h2>
-    <ul>
-        <li><strong>Repositório GitHub:</strong> <a href="https://github.com/gustavobhm/fiap-tech-challenge-fase1" target="_blank">https://github.com/gustavobhm/fiap-tech-challenge-fase1</a></li>
-        <li><strong>Vídeo de Demonstração:</strong> <a href="#" target="_blank">Link do Vídeo no YouTube</a></li>
-    </ul>
+<h3>📍 Módulo Complementar (EXTRA): Visão Computacional &amp; MLOps</h3>
+<ul>
+  <li><strong>Modelo de Visão Computacional (MobileNetV2):</strong> Treinado no dataset <em>BUSI (Breast Ultrasound Images)</em> para classificação multiclasse (Benigno / Maligno / Normal) utilizando Transfer Learning e validação visual local via <strong>Grad-CAM (Gradient-weighted Class Activation Mapping)</strong>.</li>
+  <li><strong>Conteinerização &amp; MLOps:</strong> Suporte a execução em ambientes isolados via <strong>Dockerfile</strong> e pacotes de dependências versionados em <code>requirements.txt</code>.</li>
+</ul>
 
-</body>
-</html>
+<hr />
+
+<h2>📊 Métricas e Resultados dos Modelos</h2>
+
+<h3>1. Classificação Tabular (Breast Cancer Wisconsin - Módulo Principal)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Métrica</th>
+      <th>Resultado (Regressão Logística Otimizada)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Algoritmo</strong></td>
+      <td>Regressão Logística + StandardScaler</td>
+    </tr>
+    <tr>
+      <td><strong>Acurácia Global</strong></td>
+      <td>98,25%</td>
+    </tr>
+    <tr>
+      <td><strong>Recall (Maligno - Classe 0)</strong></td>
+      <td>97,62% <em>(Apenas 1 Falso Negativo em 114 amostras de teste)</em></td>
+    </tr>
+    <tr>
+      <td><strong>Precisão (Maligno)</strong></td>
+      <td>98,81%</td>
+    </tr>
+    <tr>
+      <td><strong>F1-Score (Maligno)</strong></td>
+      <td>98,21%</td>
+    </tr>
+    <tr>
+      <td><strong>Explicabilidade</strong></td>
+      <td>SHAP (Análise de impacto e relevância das variáveis)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. Visão Computacional (Breast Ultrasound Images - BUSI - Módulo Complementar/EXTRA)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Métrica</th>
+      <th>Resultado (MobileNetV2 Refinado)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Abordagem</strong></td>
+      <td>Transfer Learning (MobileNetV2) + Dropout(0.5)</td>
+    </tr>
+    <tr>
+      <td><strong>Classes</strong></td>
+      <td>Benigno / Maligno / Normal</td>
+    </tr>
+    <tr>
+      <td><strong>Acurácia Global</strong></td>
+      <td>76,30% <em>(156 amostras de teste de validação)</em></td>
+    </tr>
+    <tr>
+      <td><strong>Recall (Maligno)</strong></td>
+      <td>73,81% <em>(31 acertos em 42 casos malignos reais)</em></td>
+    </tr>
+    <tr>
+      <td><strong>Recall (Benigno)</strong></td>
+      <td>74,71% <em>(65 acertos em 87 casos benignos reais)</em></td>
+    </tr>
+    <tr>
+      <td><strong>Recall (Normal)</strong></td>
+      <td>85,19% <em>(23 acertos em 27 exames normais)</em></td>
+    </tr>
+    <tr>
+      <td><strong>Explicabilidade</strong></td>
+      <td>Mapas de Ativação Térmicos por Grad-CAM (3 colunas)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2>📄 Relatórios Técnicos em PDF</h2>
+
+<p>Os relatórios técnicos impressos exigidos pelo desafio foram gerados dinamicamente via código e estão disponíveis na pasta <code>reports/</code> do repositório:</p>
+
+<ul>
+  <li>📄 <strong><a href="reports/Relatorio_Tecnico_Oficial_Wisconsin.pdf" target="_blank">Relatório Técnico 1 - Dados Tabulares (Wisconsin) PDF</a></strong></li>
+  <li>📄 <strong><a href="reports/Relatorio_Tecnico_Oficial_Visao_BUSI.pdf" target="_blank">Relatório Técnico 2 - Visão Computacional (BUSI) PDF</a></strong></li>
+</ul>
+
+<hr />
+
+<h2>📁 Datasets Utilizados</h2>
+
+<ul>
+  <li><strong>Dados Tabulares:</strong> <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)" target="_blank">Breast Cancer Wisconsin (Diagnostic)</a> - UCI Machine Learning Repository.</li>
+  <li><strong>Imagens de Ultrassom:</strong> <a href="https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset" target="_blank">Dataset of Breast Ultrasound Images (BUSI)</a> - Kaggle.</li>
+</ul>
+
+<hr />
+
+<h2>📂 Estrutura do Repositório</h2>
+
+<pre><code>fiap-tech-challenge-fase1/
+├── data/
+│   ├── breast_cancer_wisconsin.csv         # Dataset tabular do repositório UCI
+│   └── breast_ultrasound_dataset_info.md   # Instruções e origem do dataset BUSI
+├── models/
+│   ├── mobilenetv2_busi_best.keras         # Modelo de visão computacional treinado (.keras)
+│   ├── modelo_breast_cancer.pkl            # Modelo tabular treinado (Regressão Logística .pkl)
+│   └── scaler_breast_cancer.pkl            # Escalador das variáveis tabulares (StandardScaler .pkl)
+├── notebooks/
+│   ├── 01_classificacao_tabular_wisconsin_V11.ipynb # Notebook 1: Análise Tabular &amp; SHAP
+│   └── 02_visao_computacional_cnn_busi_v9.ipynb     # Notebook 2: Visão Computacional &amp; Grad-CAM
+├── reports/
+│   ├── Relatorio_Tecnico_Oficial_Visao_BUSI.pdf  # Relatório técnico oficial (Visão)
+│   └── Relatorio_Tecnico_Oficial_Wisconsin.pdf   # Relatório técnico oficial (Tabular)
+├── Dockerfile                              # Configuração do container para a aplicação
+├── README.md                               # Documentação técnica do repositório
+└── requirements.txt                        # Dependências e bibliotecas do projeto</code></pre>
+
+<hr />
+
+<h2>🚀 Como Executar o Projeto</h2>
+
+<h3>Opção 1: Execução no Google Colab (Recomendado)</h3>
+
+<p>Você pode abrir e executar os notebooks diretamente no Google Colab:</p>
+
+<ul>
+  <li>
+    <strong>Notebook 1 (Dados Tabulares - Wisconsin &amp; SHAP):</strong><br />
+    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/01_classificacao_tabular_wisconsin_V11.ipynb" target="_blank">
+      <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
+    </a>
+  </li>
+  <br />
+  <li>
+    <strong>Notebook 2 (Visão Computacional - BUSI &amp; Grad-CAM):</strong><br />
+    <em>(Recomendado ativar a aceleração por GPU no menu: Ambiente de execução &gt; Alterar o tipo de ambiente de execução &gt; GPU T4)</em><br />
+    <a href="https://colab.research.google.com/github/gustavobhm/fiap-tech-challenge-fase1/blob/main/notebooks/02_visao_computacional_cnn_busi_v9.ipynb" target="_blank">
+      <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
+    </a>
+  </li>
+</ul>
+
+<h4>Instalação Manual de Dependências no Colab:</h4>
+<p>Se necessário, execute a célula inicial do notebook para preparar o ambiente:</p>
+
+<pre><code>!pip install -q kagglehub grad-cam matplotlib seaborn scikit-learn tensorflow shap joblib reportlab opencv-python</code></pre>
+
+<hr />
+
+<h3>Opção 2: Execução Local via Docker</h3>
+
+<p>Para construir e rodar a aplicação em um ambiente isolado conteinerizado:</p>
+
+<ol>
+  <li><strong>Construir a imagem Docker:</strong>
+    <pre><code>docker build -t fiap-tech-challenge .</code></pre>
+  </li>
+  <li><strong>Executar o container:</strong>
+    <pre><code>docker run -p 8888:8888 fiap-tech-challenge</code></pre>
+  </li>
+</ol>
