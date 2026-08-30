@@ -26,7 +26,7 @@
 
 <h2>🎥 Vídeo de Demonstração do Projeto</h2>
 
-<p>Acesse a apresentação completa da solução, cobrindo a arquitetura, execução dos notebooks, infraestrutura MLOps/Docker e análises de explicabilidade (SHAP e Grad-CAM):</p>
+<p>Acesse a apresentação completa da solução:</p>
 
 <ul>
   <li>🎬 <strong><a href="https://youtu.be/RAGNlrmIxX8" target="_blank">Assistir ao Vídeo de Demonstração no YouTube</a></strong></li>
