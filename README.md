@@ -28,7 +28,7 @@
 <p>Acesse a apresentação completa da solução, cobrindo a arquitetura, execução dos notebooks, infraestrutura MLOps/Docker e análises de explicabilidade (SHAP e Grad-CAM):</p>
 
 <ul>
-  <li>🎬 <strong><a href="COLOQUE_SEU_LINK_DO_YOUTUBE_AQUI" target="_blank">Assistir ao Vídeo de Demonstração no YouTube</a></strong></li>
+  <li>🎬 <strong><a href="[LINK DO YOUTUBE](https://youtu.be/RAGNlrmIxX8)" target="_blank">Assistir ao Vídeo de Demonstração no YouTube</a></strong></li>
 </ul>
 
 <hr />
