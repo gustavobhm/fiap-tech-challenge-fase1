@@ -18,7 +18,8 @@
 <h2>👥 Integrantes do Grupo</h2>
 
 <ul>
-  <li><strong>Gustavo Luis dos Santos RM: 376497</strong></li>
+  <li><strong>Gustavo Luis dos Santos</strong></li> 
+  <li><strong>RM:</strong> 376497</li>
 </ul>
 
 <hr />
